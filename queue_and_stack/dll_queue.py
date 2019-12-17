@@ -6,14 +6,32 @@ from doubly_linked_list import DoublyLinkedList
 class Queue:
     def __init__(self):
         self.size = 0
-        # Why is our DLL a good choice to store our elements?
-        # self.storage = ?
+        # print('self.size')
+        # print(self.size)
+        # Why is our DLL(DOUBLE LINKED LIST) a good choice to store our elements? -->
+        self.storage = DoublyLinkedList()
+        print('self.storage')
+        print(self.storage)
+
 
     def enqueue(self, value):
-        pass
+        # self.storage.insert(0, value)
+        # self.size.storage = self.storage.len()
+        self.size += 1
+        # return?
+        self.storage.add_to_head(value)
 
+# DELETE
     def dequeue(self):
-        pass
+        self.size - 1
+        node = storage.
+        self.storage.delete(node)
+        # print('self.storage.pop()')
+        # print(self.storage.pop())
+        # return self.storage.pop()
 
     def len(self):
-        pass
+        self.storage.get_max()
+        # print('len(self.storage)')
+        # print(len(self.storage))
+        # return len(self.storage)
