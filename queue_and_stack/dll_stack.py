@@ -16,7 +16,7 @@ class Stack:
 
     # removing from the end
     def pop(self):
-        if self.size is not 1:
+        if self.size is not 0:
             self.size -= 1
             return self.storage.remove_from_tail()
         else:
