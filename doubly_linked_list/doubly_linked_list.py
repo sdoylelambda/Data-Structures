@@ -139,13 +139,13 @@ class DoublyLinkedList:
             current = current.next
         return max_val
 
-    # def get_node_from_key(self, key):
-    #     if not self.head:
-    #         return None
-    #     current = self.head
-    #
-    #     while current.value[0] is not key:
-    #         if current.next is None:
-    #             return None
-    #         current = current.next
-    #     return current
+    def get_node_from_key(self, key):
+        if not self.head:
+            return None
+        current = self.head
+
+        while current.value[0] is not key:
+            if current.next is None:
+                return None
+            current = current.next
+        return current
