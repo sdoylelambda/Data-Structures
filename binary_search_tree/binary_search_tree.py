@@ -173,11 +173,11 @@ class BinarySearchTree:
 
 
 
-class BinarySearchTree:
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
+# class BinarySearchTree:
+#     def __init__(self, value):
+#         self.value = value
+#         self.left = None
+#         self.right = None
 
     # DAY 2 Project -----------------------
 
@@ -198,10 +198,6 @@ class BinarySearchTree:
         #
         #
 
-
-
-
-
         pass
 
 
@@ -209,44 +205,31 @@ class BinarySearchTree:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    class BinarySearchTree:
+        def __init__(self, value):
+            self.value = value
+            self.left = None
+            self.right = None
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
         # make a queue
-        # put root in the queue
+        # put root in the queue -- use Queue - already made
+        queue = Queue(self.value)
         # while queue is not empty
+        while queue:
         #   pop out the front of the queue
-        #   do da tang
-        #   if left:
+            queue.pop(self.value)
+        #   if left
+            if self.left > 0:
         #       add left to back of queue
+                self.left = self.enqueue(node)
         #   if right:
+            if self.right >= 0:
+                self.right = self.enqueue(node)
         #       add right to back of queue
-        pass
+
 
 
 
@@ -257,16 +240,20 @@ class BinarySearchTree:
     # in an iterative depth first traversal
     def dft_print(self, node):
         # hardest, use recursion
-        # make a stack
+        # make a stack --- use Stack -- already made
+        stack = Stack(node)
         # put root in stack
         # while stack not empty
+        while stack:
         #   pop root out of stack
-        #   do da tang
-        #   if left:
+            stack.pop(node)
+            if self.left:
         #       add left to stack
-        #   if right:
+                self.left = self.push(node)
+            if self.right:
         #       add right to stack
-        pass
+                self.right = self.push(node)
+
 
 
 
