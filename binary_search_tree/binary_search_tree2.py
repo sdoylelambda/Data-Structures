@@ -26,24 +26,6 @@ class BinarySearchTree2:
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     def contains(self, target):
         if self.value == target:
             return True
@@ -62,21 +44,21 @@ class BinarySearchTree2:
     # just go right
     def get_max(self):
         # recursive solution
-        # if not self.right:
-        #     return self.value
-        # else:
-        #     return self.right.get_max()
+        if not self.right:
+            return self.value
+        else:
+            return self.right.get_max()
 
         # iterative solution
-        max_value = self.value
-            # create a reference to the current node and update it
-            # as we traverse the tree
-        current = self
-        while current:
-            if current.value > max_value:
-                max_value = current.value
-                # move pointer to next right
-            current = current.right
+        # max_value = self.value
+        #     # create a reference to the current node and update it
+        #     # as we traverse the tree
+        # current = self
+        # while current:
+        #     if current.value > max_value:
+        #         max_value = current.value
+        #         # move pointer to next right
+        #     current = current.right
 
         return max_value
 

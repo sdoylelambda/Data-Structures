@@ -70,12 +70,57 @@ class BinarySearchTree:
         if self.right:
             self.right.for_each(cb)
 
+
+
+
+
+
+
+
+
+
+
     # DAY 2 Project -----------------------
 
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
+    # use stack
     def in_order_print(self, node):
-        pass
+        # make a stack
+        stack = Stack()
+        # add root to stack
+        stack.push(node)
+        # while there is stuff in the stack
+        if stack is not None:
+        # pop 13 and save in temp
+            temp = stack.pop()
+        # DO THE THING!!!!
+        # if temp.left add to stack
+            if temp.left:
+                return self.left.in_order_print(node)
+        # if temp.right add to stack
+            if temp.left:
+                return self.right.in_order_print(node)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
@@ -88,6 +133,44 @@ class BinarySearchTree:
     # use stack
     def dft_print(self, node):
         pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
