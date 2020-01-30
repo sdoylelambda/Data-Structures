@@ -87,92 +87,90 @@ class BinarySearchTree:
     # use stack
     def in_order_print(self, node):
         # make a stack
-        stack = Stack()
-        # add root to stack
-        stack.push(node)
-        # while there is stuff in the stack
-        if stack is not None:
-        # pop 13 and save in temp
-            temp = stack.pop()
-        # DO THE THING!!!!
-        # if temp.left add to stack
-            if temp.left:
-                return self.left.in_order_print(node)
-        # if temp.right add to stack
-            if temp.left:
-                return self.right.in_order_print(node)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        # stack = Stack()
+    #         # # add root to stack
+    #         # stack.push(node)
+    #         # # while there is stuff in the stack
+    #         # if stack is not None:
+    #         # # pop 13 and save in temp
+    #         #     temp = stack.pop()
+    #         # # DO THE THING!!!!
+    #         # # if temp.left add to stack
+    #         #     if temp.left:
+    #         #         return self.left.in_order_print(node)
+    #         # # if temp.right add to stack
+    #         #     if temp.left:
+    #         #         return self.right.in_order_print(node)
+        if node == None:
+            return
+        self.in_order_print(node.left)
+        print(node.value)
+        self.in_order_print(node.right)
 
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     # use queue
     def bft_print(self, node):
-        pass
+        # make a queue
+        # put root in the queue -- use Queue - already made
+        # queue = Queue()
+        # # while queue is not empty
+        # while queue:
+        #     #   pop out the front of the queue
+        #     queue.dequeue()
+        #     #   if left
+        #     if self.left:
+        #         #       add left to back of queue
+        #         self.left = queue.enqueue(node)
+        #     #   if right:
+        #     if self.right:
+        #         self.right = queue.enqueue(node)
+        # #       add right to back of queue
+        #
+        node_queue = Queue()
+
+        node_queue.enqueue(node)
+
+        while node_queue.len() > 0:
+            current_node = node_queue.dequeue()
+            print(current_node.value)
+
+            if current_node.left != None:
+                node_queue.enqueue(current_node.left)
+            if current_node.right != None:
+                node_queue.enqueue(current_node.right)
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     # use stack
     def dft_print(self, node):
-        pass
+        # hardest, use recursion
+        # make a stack --- use Stack -- already made
+        # stack = Stack(node)
+    #         # # put root in stack
+    #         # # while stack not empty
+    #         # while stack:
+    #         #     #   pop root out of stack
+    #         #     stack.pop(node)
+    #         #     if self.left:
+    #         #         #       add left to stack
+    #         #         self.left = self.push(node)
+    #         #     if self.right:
+    #         #         #       add right to stack
+    #         #         self.right = self.push(node)
+        node_stack = Stack()
 
+        node_stack.push(node)
 
+        while node_stack.len() > 0:
+            current_node = node_stack.pop()
+            print(current_node.value)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            if current_node.left != None:
+                node_stack.push(current_node.left)
+            if current_node.right != None:
+                node_stack.push(current_node.right)
 
     # STRETCH Goals -------------------------
 

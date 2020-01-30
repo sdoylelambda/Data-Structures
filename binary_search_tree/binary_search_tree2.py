@@ -102,7 +102,7 @@ class BinarySearchTree2:
 
 
 
-        # breadth first traversal --- use Queue instead of stack -- first in first out -- back of the line
+        # depth first traversal --- use Queue instead of stack -- first in first out -- back of the line
         # recursion does not work
         # 1 level of tree at a time hitting all nodes then going down
         # look left and right
